@@ -1,0 +1,43 @@
+<div class="g-row">
+      <div class="g-col">
+        <form class="lead-form" (ngSubmit)="submit()" novalidate>
+            <input
+                [(ngModel)]="firstName"
+                (keyup.escape)="clear()"
+                autocomplete="no"
+                autofocus
+                class="lead-form__input"
+                name="firstName"
+                placeholder="firstName"
+                required
+                type="text" 
+            />
+
+            <input
+                [(ngModel)]="lastName"
+                (keyup.escape)="clear()"
+                autocomplete="no"
+                autofocus
+                class="lead-form__input"
+                name="lastName"
+                placeholder="lastName"
+                required
+                type="text" 
+            />
+
+            <input
+                [(ngModel)]="skills"
+                (keyup.escape)="clear()"
+                autocomplete="no"
+                autofocus
+                class="lead-form__input"
+                name="skills"
+                placeholder="skills"
+                required
+                type="text" 
+            />
+
+            <button type="submit" class="button raised blue">Add</button>
+        </form>
+    </div>
+</div>

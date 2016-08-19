@@ -1,0 +1,15 @@
+<div class="g-row">
+    <div class="g-col">
+        <form class="lead-form">
+            <input class="lead-form__input" type="text" name="candidate" [(ngModel)]="candidate" (keyup)="searchUser()" placeholder="Search" />
+        </form>
+    </div>
+    <div class="g-col">
+        <lead-list
+            [filter]="filter | async"
+            [leads]="leadService.visibleLeads$"
+            (remove)="leadService.removeLead($event)"
+            (update)="leadService.updateLead($event.lead, $event.changes)"
+        ></lead-list>
+    </div>
+</div>

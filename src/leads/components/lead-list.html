@@ -1,0 +1,8 @@
+<div class="lead-list">
+    <lead-item
+        *ngFor="let lead of leads | async"
+        [lead]="lead"
+        (remove)="remove.emit(lead)"
+        (update)="update.emit({lead: lead, changes: $event})">
+    </lead-item>
+</div>
